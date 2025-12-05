@@ -1,3 +1,26 @@
+server:
+  port: 8080
+
 spring:
-  application:
-    name: p2servidores
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bdfilme
+    username: postgres
+    password: lucas123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: esta_e_uma_senha_muito_grande_1234
+  expirationMinutes: 120
+
+tmdb:
+  baseUrl: https://api.themoviedb.org/3
+  apiKey: 255a2f235841475ededb012fc67011f4
+  defaultLanguage: pt-BR
+
+app:
+  corsAllowedOrigin: http://localhost:5173
