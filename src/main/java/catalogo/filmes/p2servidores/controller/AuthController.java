@@ -25,15 +25,16 @@ import catalogo.filmes.p2servidores.service.AuthService;
 public class AuthController {
 
   private final AuthService authService;
-  private final UserRepository userRepo;
-  private final PasswordEncoder encoder;
-  private final AuthenticationManager authManager; //-- estava entrando em loop de autenticação
+  // private final UserRepository userRepo;
+  // private final PasswordEncoder encoder;
+  // private final AuthenticationManager authManager;
 
-  public AuthController(AuthService authService, UserRepository userRepo, AuthenticationManager authManager, PasswordEncoder encoder) {
+  public AuthController(AuthService authService) {
+    // UserRepository userRepo, AuthenticationManager authManager, PasswordEncoder encoder
     this.authService = authService;
-    this.userRepo = userRepo;
-    this.authManager = authManager;
-    this.encoder = encoder;
+    // this.userRepo = userRepo;
+    // this.authManager = authManager;
+    // this.encoder = encoder;
   }
 
   @PostMapping("/register")
@@ -44,13 +45,13 @@ public class AuthController {
   @PostMapping("/login")
   public AuthResponse login(@RequestBody @Valid LoginRequest req) {
     // valida no banco
-    User u = userRepo.findByEmail(req.email()).orElseThrow(() -> new BadCredentialsException("Credenciais inválidas"));
-    if (!encoder.matches(req.password(), u.getPasswordHash())) throw new BadCredentialsException("Credenciais inválidas");
+    // User u = userRepo.findByEmail(req.email()).orElseThrow(() -> new BadCredentialsException("Credenciais inválidas"));
+    // if (!encoder.matches(req.password(), u.getPasswordHash())) throw new BadCredentialsException("Credenciais inválidas");
 
     
-    authManager.authenticate(
-        new UsernamePasswordAuthenticationToken(req.email(), req.password(), List.of(new SimpleGrantedAuthority(u.getRole().name())))
-    );
+    // authManager.authenticate(
+    //     new UsernamePasswordAuthenticationToken(req.email(), req.password(), List.of(new SimpleGrantedAuthority(u.getRole().name())))
+    // );
     
     return authService.login(req);
   }
