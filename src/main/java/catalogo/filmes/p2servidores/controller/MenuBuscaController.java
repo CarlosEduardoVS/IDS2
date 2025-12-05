@@ -1,7 +1,5 @@
 package catalogo.filmes.p2servidores.controller;
 
-// import br.com.medialist.dto.tmdb.SearchResponseDto;
-// import br.com.medialist.service.TmdbService;
 import org.springframework.web.bind.annotation.*;
 
 import catalogo.filmes.p2servidores.dto.tmdb.PesquisaResponseDto;
