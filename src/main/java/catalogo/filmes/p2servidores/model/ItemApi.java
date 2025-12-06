@@ -22,22 +22,22 @@ public class ItemApi {
 
   @Enumerated(EnumType.STRING)
   @Column(name = "media_type", nullable = false)
-  private TipoConteudo mediaType; //tipoConteudo
+  private TipoConteudo mediaType;
 
   @Column(name = "poster_path")
-  private String posterPath; //poster
+  private String posterPath;
 
   @Column(name = "original_language")
-  private String originalLanguage; //linguagemOriginal
+  private String originalLanguage;
 
   @Column(nullable = false)
-  private String title; //titulo
+  private String title;
 
   @Column(name = "original_title")
-  private String originalTitle; //tituloOriginal
+  private String originalTitle;
 
-  private LocalDate releaseDate; //data
+  private LocalDate releaseDate;
 
   @Column(columnDefinition = "text")
-  private String overview; //resumo
+  private String overview;
 }

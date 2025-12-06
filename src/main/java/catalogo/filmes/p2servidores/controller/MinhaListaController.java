@@ -1,7 +1,5 @@
 package catalogo.filmes.p2servidores.controller;
 
-// import br.com.medialist.dto.list.*;
-// import br.com.medialist.service.MyListService;
 import java.util.List;
 
 import org.springframework.security.core.Authentication;
@@ -72,7 +70,7 @@ public class MinhaListaController {
       description = "Atualiza informações de um item da lista, como comentário ou status."
   )
   public ListaEntidadeDto update(Authentication auth, @PathVariable Long entryId,
-                            @RequestBody @Valid ComentarioRequest req) {
+                                @RequestBody @Valid ComentarioRequest req) {
     Long userId = SecurityUtil.userIdFromAuth(auth);
     return service.update(userId, entryId, req);
   }

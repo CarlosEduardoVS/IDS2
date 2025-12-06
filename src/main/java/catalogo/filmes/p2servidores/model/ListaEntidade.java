@@ -23,12 +23,11 @@ public class ListaEntidade {
 
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
   @JoinColumn(name = "media_item_id", nullable = false)
-  private ItemApi mediaItem; //item
+  private ItemApi mediaItem;
 
   @Column(nullable = false)
-  private Instant addedAt; //dataAdd
+  private Instant addedAt;
 
-  //add comentario
   @Column(columnDefinition = "text")
-  private String comment; //comentario
+  private String comment;
 }

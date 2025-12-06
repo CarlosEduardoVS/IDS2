@@ -1,8 +1,5 @@
 package catalogo.filmes.p2servidores.service;
 
-// import br.com.medialist.dto.tmdb.MediaCardDto;
-// import br.com.medialist.dto.tmdb.SearchResponseDto;
-// import br.com.medialist.model.MediaType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -118,8 +115,6 @@ public class TmdbService {
     if (b != null && !b.isBlank()) return b;
     return "";
   }
-
-  // ====== DTOs internos para Jackson ======
 
   public record TmdbSearchResponse(
     int page,

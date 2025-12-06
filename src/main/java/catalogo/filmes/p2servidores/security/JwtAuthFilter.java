@@ -1,7 +1,5 @@
 package catalogo.filmes.p2servidores.security;
 
-// import br.com.medialist.model.User;
-// import br.com.medialist.repository.UserRepository;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -1,6 +1,5 @@
 package catalogo.filmes.p2servidores.security;
 
-// import br.com.medialist.model.Role;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;

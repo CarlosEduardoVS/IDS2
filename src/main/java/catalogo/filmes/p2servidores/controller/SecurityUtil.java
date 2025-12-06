@@ -1,6 +1,5 @@
 package catalogo.filmes.p2servidores.controller;
 
-// import br.com.medialist.repository.UserRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 

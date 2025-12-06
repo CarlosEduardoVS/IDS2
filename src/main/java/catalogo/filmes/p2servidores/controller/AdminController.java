@@ -1,8 +1,5 @@
 package catalogo.filmes.p2servidores.controller;
 
-// import br.com.medialist.dto.admin.*;
-// import br.com.medialist.dto.list.ListEntryDto;
-// import br.com.medialist.service.AdminService;
 import java.util.List;
 
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,12 +1,5 @@
 package catalogo.filmes.p2servidores.service;
 
-// import br.com.medialist.dto.auth.AuthResponse;
-// import br.com.medialist.dto.auth.LoginRequest;
-// import br.com.medialist.dto.auth.RegisterRequest;
-// import br.com.medialist.model.Role;
-// import br.com.medialist.model.User;
-// import br.com.medialist.repository.UserRepository;
-// import br.com.medialist.security.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

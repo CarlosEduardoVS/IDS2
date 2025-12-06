@@ -1,9 +1,5 @@
 package catalogo.filmes.p2servidores.service;
 
-// import br.com.medialist.dto.admin.AdminUserDto;
-// import br.com.medialist.dto.list.ListEntryDto;
-// import br.com.medialist.model.User;
-// import br.com.medialist.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import catalogo.filmes.p2servidores.dto.admin.AdminUserDto;

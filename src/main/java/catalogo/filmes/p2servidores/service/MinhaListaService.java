@@ -1,11 +1,5 @@
 package catalogo.filmes.p2servidores.service;
 
-// import br.com.medialist.dto.list.AddToListRequest;
-// import br.com.medialist.dto.list.ListEntryDto;
-// import br.com.medialist.model.*;
-// import br.com.medialist.repository.ListEntryRepository;
-// import br.com.medialist.repository.MediaItemRepository;
-// import br.com.medialist.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import catalogo.filmes.p2servidores.dto.list.AddNaListaRequest;
@@ -56,7 +50,6 @@ public class MinhaListaService {
 
     TipoConteudo mt = TipoConteudo.valueOf(req.mediaType().toUpperCase());
 
-    // Busca detalhes no TMDB (não confia no front)
     TmdbService.TmdbDetails details = tmdbService.fetchDetails(req.tmdbId(), mt, null);
     if (details == null || details.id() == null) throw new RuntimeException("Item não encontrado no TMDB");
 
@@ -109,20 +102,12 @@ public class MinhaListaService {
     );
   }
 
-
-
   public ListaEntidadeDto update(Long userId, Long entryId, ComentarioRequest req) {
     ListaEntidade entry = listEntryRepository.findByIdAndUserId(entryId, userId)
       .orElseThrow(() -> new RuntimeException("Item não encontrado na sua lista"));
 
-    entry.setComment(req.comment()); // pode ser null => “apagar comentário”
+    entry.setComment(req.comment());
     entry = listEntryRepository.save(entry);
     return toDto(entry);
   }
-
-
-
-
-
-
 }
