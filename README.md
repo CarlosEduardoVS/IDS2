@@ -13,6 +13,7 @@ Backend desenvolvido com **Spring Boot**, utilizando **Spring Security**, **JWT*
 ## 🚀 Tecnologias Utilizadas
 
 * **Spring Boot**
+* **Swagger / OpenAPI (Documentação automática da API)**
 * **Spring Security + JWT**
 * **Spring Data JPA**
 * **PostgreSQL**
