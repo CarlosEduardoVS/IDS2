@@ -153,4 +153,3 @@ A comunicação é feita via chamadas HTTP para os endpoints públicos do TMDB.
 
 ---
 
-Pronto para usar no README.md!
